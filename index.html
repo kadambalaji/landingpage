@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProDigy Infotech</title>
+    <style>
+        /* Basic styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation menu styles */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        nav.scrolled {
+            background-color: #444;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #333;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        /* Hero section styles */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin: 10px 0 20px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: #555;
+        }
+
+        /* Page content styles */
+        .content {
+            padding: 20px;
+            height: 1500px; /* To demonstrate scrolling */
+            background-color: #f4f4f4;
+        }
+
+        .content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav id="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="home">
+    <h1>Welcome to ProDigy Infotech</h1>
+    <p>Innovating technology for a better tomorrow.</p>
+    <button onclick="alert('Thank you for choosing ProDigy Infotech!')">Get Started</button>
+</div>
+
+<div class="content" id="about">
+    <h2>About Us</h2>
+    <p>
+        At ProDigy Infotech, we are dedicated to delivering cutting-edge technological solutions tailored to meet the unique needs of our clients. 
+        Our team of experts specializes in web development, software engineering, and digital innovation to help businesses thrive in the digital age.
+    </p>
+</div>
+
+<div class="content" id="services">
+    <h2>Our Services</h2>
+    <p>
+        We offer a wide range of services including web development, mobile app development, cloud solutions, and IT consulting. 
+        Our solutions are designed to drive growth and innovation for your business.
+    </p>
+</div>
+
+<div class="content" id="portfolio">
+    <h2>Portfolio</h2>
+    <p>
+        Explore our portfolio to see the innovative projects we have delivered for our clients. 
+        From startups to established enterprises, we bring ideas to life.
+    </p>
+</div>
+
+<div class="content" id="contact">
+    <h2>Contact Us</h2>
+    <p>
+        Get in touch with us to discuss your business needs and how we can help. 
+        Email us at <a href="mailto:info@prodigyinfotech.com">info@prodigyinfotech.com</a> or call us at +123-456-7890.
+    </p>
+</div>
+
+<script>
+    // JavaScript for adding interactivity
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+
+</body>
+</html>
